@@ -17,10 +17,26 @@ console.log(age);
 
 // console.log(answer);
 
-const isConfirm = confirm("Чи замовлення вірно?");
+// const isConfirm = confirm("Чи замовлення вірно?");
 
-if (isConfirm) {
-  alert("Ваше замовлення буде проятягом години");
-} else {
-  prompt("Що саме не вірно?");
-}
+// if (isConfirm) {
+//   alert("Ваше замовлення буде проятягом години");
+// } else {
+//   prompt("Що саме не вірно?");
+// }
+
+console.log(",");
+// 0
+// null - пустий
+// undefined - JS сходив, пошукав, не знайшов
+// boolean - true або false.
+// Number - 2, 2.5, 3
+// String - ""
+// BigInt - Нереально велике число
+// Symbol - Можна побачити у бібліотеках
+
+// string = ``
+
+const string = prompt("alsdhlaishdl ?");
+
+console.log(typeof true);
