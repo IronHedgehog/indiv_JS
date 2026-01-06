@@ -1,42 +1,40 @@
-// 1) Const -скорочено від константа (значення не змінюється) - 95%
-// 2) let - Дає можливість змінюватись нашій змінній
-// 3) var - скорочено від variable (глобальна область бачення)
-const userName = "Artem"; // "" - тип даних рядок
+// + - / * % **
 
-let age = 18;
-age = age + 1;
-console.log(age);
+// % - остачу від ділення
+// console.log(10 % 3);
 
-// alert() - повідомлення
-// prompt() - Запитання?
-// confirm() - Підтвердження
+// console.log(2 ** 4);
 
-// alert("Привіт,радий тебе бачити");
+// console.log();
 
-// const answer = prompt("Гей, як в тебе справи?");
+// (), * /, + -
 
-// console.log(answer);
+// Порівняння
+// <= , >=, ===, ==, >, < - true або false
 
-// const isConfirm = confirm("Чи замовлення вірно?");
+console.log("12" == 12); // == - не суворе порівняння (використовувати коли треба кастиль)
+console.log("12" === 12); // === - суворе порівняння(використовувати завжди)
 
-// if (isConfirm) {
-//   alert("Ваше замовлення буде проятягом години");
-// } else {
-//   prompt("Що саме не вірно?");
-// }
+// isNaN - перевірка на НЕ число
 
-console.log(",");
-// 0
-// null - пустий
-// undefined - JS сходив, пошукав, не знайшов
-// boolean - true або false.
-// Number - 2, 2.5, 3
-// String - ""
-// BigInt - Нереально велике число
-// Symbol - Можна побачити у бібліотеках
+console.log(isNaN(12));
 
-// string = ``
+if (isNaN(12)) {
+  console.log("Введи число");
+} else {
+  console.log("Все ок, можна");
+}
 
-const string = prompt("alsdhlaishdl ?");
+// MATH -
 
-console.log(typeof true);
+console.log(Math.floor(Math.random() * 100)); // random
+
+// console.log(Math.max(12, 13, 14, 15, 10));
+// console.log(Math.min(12, 13, 14, 15, 10));
+
+console.log(Math.ceil(Math.random()));
+console.log(Math.floor(Math.random())); // +
+console.log(Math.round(Math.random()));
+
+// console.log(Math.pow(2, 5));
+// console.log(Math.sqrt(100));
