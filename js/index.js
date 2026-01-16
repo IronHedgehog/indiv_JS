@@ -1,53 +1,27 @@
-// + - / * % **
+const message = "Приивіт";
 
-// % - остачу від ділення
-// console.log(10 % 3);
+const index = message.indexOf("и", 3);
 
-// console.log(2 ** 4);
+console.log(index);
 
-// console.log();
+const message1 = "Hello";
 
-// (), * /, + -
+console.log(message1.toLowerCase().includes("E"));
 
-// Порівняння
-// <= , >=, ===, ==, >, < - true або false
+//
 
-//console.log("12" == 12); // == - не суворе порівняння (використовувати коли треба кастиль)
-//console.log("12" === 12); // === - суворе порівняння(використовувати завжди)
+// const phone = prompt("Введи номер телефону");
 
-// isNaN - перевірка на НЕ число
-
-// console.log(isNaN(12));
-
-// if (isNaN(12)) {
-//   console.log("Введи число");
+// if (phone.startsWith("+380")) {
+//   console.log("наш номер");
 // } else {
-//   console.log("Все ок, можна");
+//   console.log("закордонний номер, ми їмо трафік");
 // }
 
-// MATH -
+const img = "src/asssets/img.png";
 
-// console.log(Math.floor(Math.random() * 100)); // random
-
-// console.log(Math.max(12, 13, 14, 15, 10));
-// console.log(Math.min(12, 13, 14, 15, 10));
-
-// console.log(Math.ceil(Math.random()));
-// console.log(Math.floor(Math.random()));
-// console.log(Math.round(Math.random()));
-
-// console.log(Math.pow(2, 5));
-// console.log(Math.sqrt(100));
-
-console.log((0.1 * 10 + 0.2 * 10) / 10);
-
-const sum = parseFloat(prompt("На скільки бажаєте попвнити баланс?"));
-
-// parseInt
-// parseFloat
-
-console.log(sum + 10);
-
-const sum1 = 100;
-
-console.log(100 * 0.1);
+if (img.endsWith(".jpg")) {
+  console.log("Додавати елемент можна");
+} else {
+  console.log("Все інше пкои відкидаємо");
+}
