@@ -1,27 +1,25 @@
-const message = "Приивіт";
+// for while do ... while
 
-const index = message.indexOf("и", 3);
-
-console.log(index);
-
-const message1 = "Hello";
-
-console.log(message1.toLowerCase().includes("E"));
-
-//
-
-// const phone = prompt("Введи номер телефону");
-
-// if (phone.startsWith("+380")) {
-//   console.log("наш номер");
-// } else {
-//   console.log("закордонний номер, ми їмо трафік");
+// 1 - ключове слово
+// 2 - лічильник
+// 3 - умова роботи
+// 4 -  i++ - рух лічильника
+// for (let i = 0; i <= 100; i++) {
+//   console.log(i);
 // }
 
-const img = "src/asssets/img.png";
+// while - це цикл з умовою(він виконужться поки виконується умова)
 
-if (img.endsWith(".jpg")) {
-  console.log("Додавати елемент можна");
-} else {
-  console.log("Все інше пкои відкидаємо");
+let attempts = 3;
+const password = "QWERTY12345";
+
+while (attempts > 0) {
+  const test = prompt("Введи пароль");
+  if (test === password) {
+    alert("Ласково просимо");
+    break;
+  } else {
+    attempts--;
+    alert(`Помилка, залишилось ${attempts} спроб`);
+  }
 }
