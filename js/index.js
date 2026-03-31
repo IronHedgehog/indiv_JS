@@ -1,25 +1,82 @@
-// for while do ... while
+// Імперативний та декларативний код
+// 90%
 
-// 1 - ключове слово
-// 2 - лічильник
-// 3 - умова роботи
-// 4 -  i++ - рух лічильника
-// for (let i = 0; i <= 100; i++) {
-//   console.log(i);
+// ІМПЕРА
+// const arr = [2, 4, 6, 8];
+
+// for (const element of arr) {
+//   console.log(element * 2);
 // }
+// DECLAR
 
-// while - це цикл з умовою(він виконужться поки виконується умова)
+// arr.forEach((number) => console.log(number * 2));
 
-let attempts = 3;
-const password = "QWERTY12345";
+// чисті функції
+//Приклади та задачі
 
-while (attempts > 0) {
-  const test = prompt("Введи пароль");
-  if (test === password) {
-    alert("Ласково просимо");
-    break;
-  } else {
-    attempts--;
-    alert(`Помилка, залишилось ${attempts} спроб`);
-  }
-}
+// function filterNam(arr3) {
+//   const arr4 = [];
+//   for (const element of arr3) {
+//     if (element > 5) {
+//       arr4.push(element);
+//     }
+//   }
+//   return arr4;
+// }
+// console.log(filterNam(arr3));
+
+// const filterArr = arr3.filter((number) => number > 5);
+
+// console.log(filterArr);
+
+// map;
+
+const arr3 = [1, 4, 7, 9, 10, 3, 5, 6];
+
+const multiply = arr3.map((number) => number * 2);
+console.log(arr3);
+console.log(multiply);
+
+const cart = [
+  { id: 1, title: "Phone", price: 500 },
+  { id: 2, title: "Laptop", price: 1200 },
+  { id: 3, title: "Mouse", price: 50 },
+];
+
+const users = [
+  { id: 2, name: "Maria", age: 17, isActive: false },
+  { id: 3, name: "John", age: 30, isActive: true },
+  { id: 1, name: "Alex", age: 25, isActive: true },
+  { id: 4, name: "Kate", age: 22, isActive: false },
+];
+console.log(users);
+
+const copyArr = [...users];
+const copyArr1 = users.slice();
+
+console.log(copyArr);
+console.log(copyArr1);
+
+// const sortedUsers = copyArr1.xsort((a, b) => b.age - a.age);
+
+// console.log(sortedUsers);
+
+// localecompare;
+
+// const sortedUsersByName =
+
+console.log(copyArr.sort((a, b) => b.name - a.name));
+
+// console.log(sortedUsersByName);
+
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+
+// const string = ["c", "d", "y", "b"];
+
+// console.log(string.sort());
