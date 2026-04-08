@@ -1,107 +1,34 @@
-const characters = [
-  {
-    id: 1,
-    name: "Arthas",
-    class: "Paladin",
-    level: 80,
-    health: 12000,
-    faction: "Alliance",
-  },
-  {
-    id: 2,
-    name: "Thrall",
-    class: "Shaman",
-    level: 75,
-    health: 9500,
-    faction: "Horde",
-  },
-  {
-    id: 3,
-    name: "Sylvanas",
-    class: "Ranger",
-    level: 85,
-    health: 8000,
-    faction: "Horde",
-  },
-  {
-    id: 4,
-    name: "Jaina",
-    class: "Mage",
-    level: 78,
-    health: 6500,
-    faction: "Alliance",
-  },
-  {
-    id: 5,
-    name: "Uther",
-    class: "Paladin",
-    level: 90,
-    health: 15000,
-    faction: "Alliance",
-  },
-  {
-    id: 6,
-    name: "Gul'dan",
-    class: "Warlock",
-    level: 82,
-    health: 7000,
-    faction: "Horde",
-  },
-  {
-    id: 7,
-    name: "Illidan",
-    class: "Demon Hunter",
-    level: 99,
-    health: 20000,
-    faction: "Neutral",
-  },
-  {
-    id: 8,
-    name: "Malfurion",
-    class: "Druid",
-    level: 88,
-    health: 11000,
-    faction: "Alliance",
-  },
-  {
-    id: 9,
-    name: "Vol'jin",
-    class: "Shadow Hunter",
-    level: 72,
-    health: 8800,
-    faction: "Horde",
-  },
-  {
-    id: 10,
-    name: "Tyrande",
-    class: "Priest",
-    level: 84,
-    health: 7500,
-    faction: "Alliance",
-  },
-];
+const pirat = {
+  name: "Petro",
+  pseudo: "Jack",
+  money: 0,
 
-const number = [1, 2, 3, 4, 5];
+  goWalk() {
+    this.money += 100;
+    console.log(pirat);
+  },
+};
 
-const sum = number.reduce((acc, number) => {
-  return (acc += number);
-}, 0);
+pirat.goWalk();
 
-console.log(sum);
+Math;
+Number(0);
 
-const users = [
-  { id: 1, name: "Anna", active: true },
-  { id: 2, name: "Ivan", active: true },
-  { id: 3, name: "Olena", active: true },
-];
+// class - заводи з виробництва обʼєктів
+// class - креслення обʼєкта за яким ти можеш створювати нові обʼєкти
 
-const activeUsersIsHere = users.some(({ active }) => active);
+class BasePirate {
+  constructor(name, pseudo, money) {
+    this.name = name;
+    this.pseudo = pseudo;
+    this.money = money;
+  }
+}
 
-console.log(activeUsersIsHere);
+const Bill = new BasePirate("North", "tirn", 0);
 
-const allHere = users.every(({ active }) => active);
-
-console.log(allHere);
-
-// some;
-// every;
+for (let i = 0; i < 100; i++) {
+  console.log(new BasePirate(`North${i}`, `tirn${i}`, `${i}`));
+}
+console.log(BasePirate);
+console.log(Bill);
