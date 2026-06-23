@@ -1,34 +1,33 @@
-const pirat = {
-  name: "Petro",
-  pseudo: "Jack",
-  money: 0,
+const cards = document.querySelectorAll(".card");
+const container = document.querySelector(".container");
+console.log(cards);
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (cards) => {
+      cards.forEach((card) => {
+        card.target.classList.add("show");
+        if (card.isIntersecting) {
+          observer.unobserve(card.target);
+        }
+      });
+    },
+    {
+      rootMargin: "500px",
+    },
+  );
 
-  goWalk() {
-    this.money += 100;
-    console.log(pirat);
-  },
-};
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
 
-pirat.goWalk();
-
-Math;
-Number(0);
-
-// class - заводи з виробництва обʼєктів
-// class - креслення обʼєкта за яким ти можеш створювати нові обʼєкти
-
-class BasePirate {
-  constructor(name, pseudo, money) {
-    this.name = name;
-    this.pseudo = pseudo;
-    this.money = money;
+  function makeCard() {
+    for (let i = 0; i < 20; i++) {
+      const card = document.createElement("div");
+      card.className = "card";
+      observer.observe(card);
+      container.append(card);
+    }
   }
+} else {
+  console.log("Ваш браузер не підтримує");
 }
-
-const Bill = new BasePirate("North", "tirn", 0);
-
-for (let i = 0; i < 100; i++) {
-  console.log(new BasePirate(`North${i}`, `tirn${i}`, `${i}`));
-}
-console.log(BasePirate);
-console.log(Bill);
